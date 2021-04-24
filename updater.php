@@ -11,12 +11,35 @@
     </title>
 </head>
 
+
+<?php
+
+// получение даных с полей таблицы и запись из в переменные
+$upd_id_substance = $_GET['upd_id_substance'];
+$upd_name_substance = $_GET['upd_name_substance'];
+$upd_id_fabricator = $_GET['upd_id_fabricator'];
+$upd_name_fabricator = $_GET['upd_name_fabricator'];
+$upd_sourse_fabricator = $_GET['upd_sourse_fabricator'];
+$upd_name_medicinal = $_GET['upd_name_medicinal'];
+$upd_medicinal_price = $_GET['upd_medicinal_price'];
+
+?>
+
+
+
 <body>
     <div class="wrapper">
         <div class="wrap">
             <!-- форма для обновления данных в базе даных -->
             <form action="" method="post">
-                <input name="update_form" placeholder="Ведите новое значение" type="text" required>
+                <input name="update_form" value="<?php echo $upd_id_substance .
+                                                        $upd_name_substance .
+                                                        $upd_id_fabricator .
+                                                        $upd_name_fabricator .
+                                                        $upd_sourse_fabricator .
+                                                        $upd_name_medicinal .
+                                                        $upd_medicinal_price
+                                                    ?>" type="text" required>
                 <button class="update_btn_form" type="submit">Отправить</button>
             </form>
             <br>
@@ -28,21 +51,9 @@
 </body>
 <?php
 
-
-
-
-
-// получение даных с полей таблицы и запись из в переменные
-$upd_id_substance = $_GET['upd_id_substance'];
-$upd_name_substance = $_GET['upd_name_substance'];
-$upd_id_fabricator = $_GET['upd_id_fabricator'];
-$upd_name_fabricator = $_GET['upd_name_fabricator'];
-$upd_sourse_fabricator = $_GET['upd_sourse_fabricator'];
-$upd_name_medicinal = $_GET['upd_name_medicinal'];
-$upd_medicinal_price = $_GET['upd_medicinal_price'];
-
 // получение даных с формы и запись в переменую
 $update_form = $_POST['update_form'];
+
 
 
 
