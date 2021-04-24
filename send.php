@@ -35,7 +35,7 @@ require('connection.php');
 // проверка поля id_substance на уже сущетвующие значения в базе данных
 // выбор поля id_substance
 $query = $pdo->query('SELECT * FROM `active_substance` WHERE id_substance');
-// цыкл переберающий все значения
+// цыкл переберающий все значения в базе данных на наличие совпадений
 while ($row = $query->fetch(PDO::FETCH_BOTH)) {
     if ($row[0] == $id_substance) {
         // если найдены совпадения выдаем ошибку
@@ -48,7 +48,7 @@ while ($row = $query->fetch(PDO::FETCH_BOTH)) {
 // проверка поля id_fabricator на уже сущетвующие значения в базе данных
 // выбор поля id_fabricator
 $query = $pdo->query('SELECT * FROM `fabricator` WHERE id_fabricator');
-// цыкл переберающий все значения
+// цыкл переберающий все значения в базе данных на наличие совпадений
 while ($row = $query->fetch(PDO::FETCH_BOTH)) {
     if ($row[0] == $id_substance) {
         // если найдены совпадения выдаем ошибку
