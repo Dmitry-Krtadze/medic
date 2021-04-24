@@ -62,7 +62,7 @@ $sql = 'INSERT INTO active_substance(id_substance, name_substance) VALUES (:id_s
 // подгатовление запроса
 $query = $pdo->prepare($sql);
 // подставление данных из переменных в запрос
-$query->execute(['id_substance' => $id_substance, 'name_substance_form' => $name_substance_form]);
+$query->execute(['id_substance' => $id_substance, 'name_substance_form' => $name_substance_form,  PDO::PARAM_STR]);
 
 
 
@@ -71,7 +71,7 @@ $sql = 'INSERT INTO fabricator(id_fabricator ,name_fabricator, source_src) VALUE
 // подгатовление запроса
 $query = $pdo->prepare($sql);
 // подставление данных из переменных в запрос
-$query->execute(['id_fabricator' => $id_fabricator, 'name_fabricator_form' => $name_fabricator_form, 'sourse_fabricator_form' => $sourse_fabricator_form]);
+$query->execute(['id_fabricator' => $id_fabricator, 'name_fabricator_form' => $name_fabricator_form, 'sourse_fabricator_form' => $sourse_fabricator_form,]);
 
 
 
@@ -82,7 +82,7 @@ $sql = 'INSERT INTO medicinal_product(name_medicinal, id_substanse_prod, id_fabr
 // подгатовление запроса
 $query = $pdo->prepare($sql);
 // подставление данных из переменных в запрос
-$query->execute(['name_medicinal_form' => $name_medicinal_form, 'id_substanse_prod' => $id_substance, 'id_fabricator_prod' => $id_fabricator, 'medicinal_price_form' => $medicinal_price_form]);
+$query->execute(['name_medicinal_form' => $name_medicinal_form, 'id_substanse_prod' => $id_substance, 'id_fabricator_prod' => $id_fabricator, 'medicinal_price_form' => $medicinal_price_form,  PDO::PARAM_STR]);
 
 
 

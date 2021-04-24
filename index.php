@@ -86,8 +86,7 @@
                                 // обращение к полю таблицы и вывод из ней даных
                                 echo '<tr><td>' . $row->id_substance . '';
                                 // фукция "редактирования записей" для конкретного поля
-                                echo '<a href="/updater.php?upd_id_substance=' . $row->id_substance . '"><img class="btn-table" src="/img/icons/icons8-pencil-50.png" alt=""></a></td>
-                                </tr>';
+                                echo '<a href="/updater.php?upd_id_substance=' . $row->id_substance . '"><img class="btn-table" src="/img/icons/icons8-pencil-50.png" alt=""></a></td></tr>';
                             }
                             ?>
                         </td>
