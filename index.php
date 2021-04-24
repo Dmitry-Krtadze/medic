@@ -81,7 +81,7 @@
                             require('connection.php');
                             // выбор нужной таблицы
                             $query = $pdo->query('SELECT * FROM `active_substance`');
-                            // цыкл который выводит даные из таблицы
+                            // цикл который выводит даные из таблицы
                             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
                                 // обращение к полю таблицы и вывод из ней даных
                                 echo '<tr><td>' . $row->id_substance . '';
@@ -105,7 +105,7 @@
                             require('connection.php');
                             // выбор нужной таблицы
                             $query = $pdo->query('SELECT * FROM `active_substance`');
-                            // цыкл который выводит даные из таблиц
+                            // цикл который выводит даные из таблиц
                             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
                                 // обращение к полю таблицы и вывод из ней даных
                                 echo '<tr><td>' . $row->name_substance . '';
@@ -129,7 +129,7 @@
                             require('connection.php');
                             // выбор нужной таблицы
                             $query = $pdo->query('SELECT * FROM `fabricator`');
-                            // цыкл который выводит даные из таблиц
+                            // цикл который выводит даные из таблиц
                             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
                                 // обращение к полю таблицы и вывод из ней даных
                                 echo '<tr><td>' . $row->id_fabricator . '';
@@ -153,7 +153,7 @@
                             require('connection.php');
                             // выбор нужной таблицы
                             $query = $pdo->query('SELECT * FROM `fabricator`');
-                            // цыкл который выводит даные из таблиц
+                            // цикл который выводит даные из таблиц
                             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
                                 // обращение к полю таблицы и вывод из ней даных
                                 echo '<tr><td>' . $row->name_fabricator . '';
@@ -179,7 +179,7 @@
                             require('connection.php');
                             // выбор нужной таблицы
                             $query = $pdo->query('SELECT * FROM `fabricator`');
-                            // цыкл который выводит даные из таблиц
+                            // цикл который выводит даные из таблиц
                             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
                                 // обращение к полю таблицы и вывод из ней даных
                                 echo '<tr><td>' . $row->source_src . '';
@@ -201,7 +201,7 @@
                             <?php
                             // поключение к базе данных
                             require('connection.php');
-                            // цыкл который выводит даные из таблиц
+                            // цикл который выводит даные из таблиц
                             $query = $pdo->query('SELECT * FROM `medicinal_product`');
                             // выбор нужной таблицы
                             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
@@ -226,7 +226,7 @@
                             require('connection.php');
                             // выбор нужной таблицы
                             $query = $pdo->query('SELECT * FROM `medicinal_product`');
-                            // цыкл который выводит даные из таблиц
+                            // цикл который выводит даные из таблиц
                             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
                                 // обращение к полю таблицы и вывод из ней даных
                                 echo '<tr><td>' . $row->name_medicinal . '';
@@ -250,7 +250,7 @@
                             require('connection.php');
                             // выбор нужной таблицы
                             $query = $pdo->query('SELECT * FROM `medicinal_product`');
-                            // цыкл который выводит даные из таблиц
+                            // цикл который выводит даные из таблиц
                             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
 
                                 echo '<tr><td>' . $row->price . '';
@@ -273,7 +273,7 @@
                             require('connection.php');
                             // выбор нужной таблицы из которой я брал количество выводимых столбиков
                             $query = $pdo->query('SELECT * FROM `medicinal_product`');
-                            // цыкл который выводит даные из таблиц
+                            // цикл который выводит даные из таблиц
                             while ($row = $query->fetch(PDO::FETCH_OBJ)) {
                                 // отправка даных в delate.php в котором мы удаляем идетефикаторы из таблиц "Действующие вещество"
                                 //  и "Производитель" после из-за каскадого типа связей удаляются данные из "Лекаственое средство"
