@@ -36,7 +36,7 @@
 
                         <p class="send__form__text">Производитель</p>
 
-                        <input name="id_fabricator" class="send__form__input" placeholder="Введите артикул" type="text" required>
+                        <input name="id_fabricator_form" class="send__form__input" placeholder="Введите артикул" type="text" required>
 
                         <input name="name_fabricator_form" class="send__form__input" placeholder="Производитель" type="text" required>
 

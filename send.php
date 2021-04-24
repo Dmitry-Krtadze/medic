@@ -1,8 +1,8 @@
 <?php
 // получение даных с формы и запись их в переменные
-$id_substance_form = $_POST['id_substance'];
+$id_substance_form = $_POST['id_substance_form'];
 $name_substance_form = $_POST['name_substance_form'];
-$id_fabricator = $_POST['id_fabricator'];
+$id_fabricator_form = $_POST['id_fabricator_form'];
 $name_fabricator_form = $_POST['name_fabricator_form'];
 $sourse_fabricator_form = $_POST['sourse_fabricator_form'];
 $name_medicinal_form = $_POST['name_medicinal_form'];
@@ -62,16 +62,16 @@ $sql = 'INSERT INTO active_substance(id_substance, name_substance) VALUES (:id_s
 // подгатовление запроса
 $query = $pdo->prepare($sql);
 // подставление данных из переменных в запрос
-$query->execute(['id_substance' => $id_substance, 'name_substance_form' => $name_substance_form]);
+$query->execute(['id_substance' => $id_substance_form, 'name_substance_form' => $name_substance_form]);
 
 
 
 // выбор таблицы fabricator, выбор полей id_fabricator ,name_fabricator, source_src и объявления переменных :id_fabricator ,:name_fabricator_form, :sourse_fabricator_form
-$sql = 'INSERT INTO fabricator(id_fabricator ,name_fabricator, source_src) VALUES (:id_fabricator ,:name_fabricator_form, :sourse_fabricator_form)';
+$sql = 'INSERT INTO fabricator(id_fabricator ,name_fabricator, source_src) VALUES (:id_fabricator_form ,:name_fabricator_form, :sourse_fabricator_form)';
 // подгатовление запроса
 $query = $pdo->prepare($sql);
 // подставление данных из переменных в запрос
-$query->execute(['id_fabricator' => $id_fabricator, 'name_fabricator_form' => $name_fabricator_form, 'sourse_fabricator_form' => $sourse_fabricator_form]);
+$query->execute(['id_fabricator_form' => $id_fabricator_form, 'name_fabricator_form' => $name_fabricator_form, 'sourse_fabricator_form' => $sourse_fabricator_form]);
 
 
 
@@ -82,7 +82,7 @@ $sql = 'INSERT INTO medicinal_product(name_medicinal, id_substanse_prod, id_fabr
 // подгатовление запроса
 $query = $pdo->prepare($sql);
 // подставление данных из переменных в запрос
-$query->execute(['name_medicinal_form' => $name_medicinal_form, 'id_substanse_prod' => $id_substance, 'id_fabricator_prod' => $id_fabricator, 'medicinal_price_form' => $medicinal_price_form]);
+$query->execute(['name_medicinal_form' => $name_medicinal_form, 'id_substanse_prod' => $id_substance_form, 'id_fabricator_prod' => $id_fabricator_form, 'medicinal_price_form' => $medicinal_price_form]);
 
 
 
