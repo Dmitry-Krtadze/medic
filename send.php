@@ -1,5 +1,5 @@
 <?php
-// получение даных с формы и запись из в переменные
+// получение даных с формы и запись их в переменные
 $id_substance_form = $_POST['id_substance'];
 $name_substance_form = $_POST['name_substance_form'];
 $id_fabricator = $_POST['id_fabricator'];
@@ -57,7 +57,7 @@ while ($row = $query->fetch(PDO::FETCH_BOTH)) {
     }
 }
 
-// выбор таблицы active_substance, выбор полей id_substance, name_substance и присваивание им значений :id_substance, :name_substance_form
+// выбор таблицы active_substance, выбор полей id_substance, name_substance и объявления переменных :id_substance, :name_substance_form
 $sql = 'INSERT INTO active_substance(id_substance, name_substance) VALUES (:id_substance, :name_substance_form)';
 // подгатовление запроса
 $query = $pdo->prepare($sql);
@@ -66,7 +66,7 @@ $query->execute(['id_substance' => $id_substance, 'name_substance_form' => $name
 
 
 
-// выбор таблицы fabricator, выбор полей id_fabricator ,name_fabricator, source_src и присваивание им значений :id_fabricator ,:name_fabricator_form, :sourse_fabricator_form
+// выбор таблицы fabricator, выбор полей id_fabricator ,name_fabricator, source_src и объявления переменных :id_fabricator ,:name_fabricator_form, :sourse_fabricator_form
 $sql = 'INSERT INTO fabricator(id_fabricator ,name_fabricator, source_src) VALUES (:id_fabricator ,:name_fabricator_form, :sourse_fabricator_form)';
 // подгатовление запроса
 $query = $pdo->prepare($sql);
@@ -77,7 +77,7 @@ $query->execute(['id_fabricator' => $id_fabricator, 'name_fabricator_form' => $n
 
 
 // выбор таблицы medicinal_product, выбор полей name_medicinal, id_substanse_prod, id_fabricator_prod, price
-//  и присваивание им значений :name_medicinal_form, :id_substanse_prod, :id_fabricator_prod, :medicinal_price_form
+//  и объявления переменных :name_medicinal_form, :id_substanse_prod, :id_fabricator_prod, :medicinal_price_form
 $sql = 'INSERT INTO medicinal_product(name_medicinal, id_substanse_prod, id_fabricator_prod, price) VALUES (:name_medicinal_form, :id_substanse_prod, :id_fabricator_prod, :medicinal_price_form)';
 // подгатовление запроса
 $query = $pdo->prepare($sql);
